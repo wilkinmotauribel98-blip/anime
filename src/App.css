@@ -67,14 +67,18 @@ main{
   min-height: 150vh;
 }
 
+section{
+  position: relative;
+}
 .track{
   display: flex;
-  transform: translateX();
 }
 
 .hero{
-  height: 420px;
-  width: 100%;
+  height: 470px;
+  width: 100vw;
+  flex-shrink: 0;
+  
   position: relative;
   box-sizing: border-box;
 }
