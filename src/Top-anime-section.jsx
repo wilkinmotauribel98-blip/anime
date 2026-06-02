@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'https://esm.sh/react'
-import { useNavigate } from 'https://esm.sh/react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './App.css'
 
 
@@ -14,7 +14,7 @@ export function TopAnimeCard({ animeId, title, desc, episodes, format, genres, s
   return (
     <div className={`hero ${load ? "" : "skeleton"}`} id="hero">
       <img
-        src={`./images/${animeId}.png`}
+        src={`/images/${animeId}.png`}
         alt=""
         id="hero-img"
         className={`hero-img ${load ? "" : "skeleton"}`}

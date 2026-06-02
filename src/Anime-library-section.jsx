@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "https://esm.sh/react";
+import React, { useState, useEffect } from "react";
 
 export const AnimeLibraryCard = ({img, title, episodes})=>{
   return (

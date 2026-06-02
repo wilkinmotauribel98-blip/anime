@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "https://esm.sh/react"
+import React, { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { TopAnimeCard } from './Top-anime-section'
 import { RecomendationCard } from './Recomendation-section'
@@ -169,7 +169,7 @@ export function HomePage() {
             </div>)
           })}
           <div className="season-img-wrapper">
-              <img src={'./images/195600.png'} alt="" />
+              <img src={'/images/195600.png'} alt="" />
             </div>
           </div>
           </section>
