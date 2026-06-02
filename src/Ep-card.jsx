@@ -1,4 +1,4 @@
-
+import React from "https://esm.sh/react";
 export const EpisodeCard = ({img, title, number, duration})=>{
 
   return (
