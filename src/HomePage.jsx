@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect } from "https://esm.sh/react"
 import './App.css'
 import { TopAnimeCard } from './Top-anime-section'
 import { RecomendationCard } from './Recomendation-section'
