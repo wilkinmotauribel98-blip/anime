@@ -1,16 +1,16 @@
-import { BrowserRouter, Route, Routes } from "https://esm.sh/react/react-router-dom"
+import { HashRouter, Route, Routes } from "https://esm.sh/react-router-dom"
 import HomePage from "./HomePage"
 import { SeasonPage } from "./SeasonPage"
 
 export function App() {
   return(
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />}/>
         <Route path="/anime/:id" element={< SeasonPage />}/>
         
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
