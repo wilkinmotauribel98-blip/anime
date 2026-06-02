@@ -14,7 +14,7 @@ export function TopAnimeCard({ animeId, title, desc, episodes, format, genres, s
   return (
     <div className={`hero ${load ? "" : "skeleton"}`} id="hero">
       <img
-        src={`/images/${animeId}.png`}
+        src={`/anime/images/${animeId}.png`}
         alt=""
         id="hero-img"
         className={`hero-img ${load ? "" : "skeleton"}`}

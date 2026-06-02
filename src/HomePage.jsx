@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { TopAnimeCard } from './Top-anime-section'
-import { RecomendationCard } from './Recomendation-section'
 import { AnimeLibraryCard } from './Anime-library-section'
 import { Header, Footer } from './Header'
 const animeIds = [

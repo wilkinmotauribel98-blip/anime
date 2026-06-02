@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./SeasonPage.css";
-import { EpisodeCard } from "./Ep-card.";
+import { EpisodeCard } from "./Ep-card";
 import { Header, Footer } from "./Header";
 const infoFetch = async (id) => {
   const query = `
