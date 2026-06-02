@@ -1,16 +1,17 @@
 :root{
-  --header-color:#b6b8b9;
+  --header-color:#121212;
   --main-color:#f9f9fb;
+  --text-secondary-color:#6b7280;
+  --button-color: #514fcf;
 }
 
 body{
-
   padding: 0px;margin: 0;
   font-family: 'Segoe UI', sans-serif;
   box-sizing: border-box;
   overflow-x: hidden;
-  color: #1a1b1d;
-  background-color: #2a2a2a;
+  color: var(--main-color);
+  background-color: rgb(23, 23, 23);
 }
 .root{
   display: flex;
@@ -25,8 +26,9 @@ body{
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   height: 75px;
+  z-index: 100;
 }
 
 .header-img-container img{
@@ -38,17 +40,20 @@ body{
 }
 
 .header-link-container .header-link:first-child{
-  color: #534ae3;
+  color: var(--button-color);
 }
 .header-link-container .header-link{
   color: #6c7a8f;
   text-decoration: none;
+  font-size: 20px;
 }
-
+.header-link-container{
+  display: flex;
+  gap: 40px;
+}
 .account-container{
   width: 50px;
   height: 35px;
-  margin-left: auto;
 }
 
 .account-container a > img{
@@ -67,6 +72,7 @@ main{
   min-height: 150vh;
 }
 
+/* ---- HERO-SECTION ---- */
 section{
   position: relative;
 }
@@ -76,9 +82,8 @@ section{
 
 .hero{
   height: 470px;
-  width: 100vw;
+  width: 100%;
   flex-shrink: 0;
-  
   position: relative;
   box-sizing: border-box;
 }
@@ -86,7 +91,7 @@ section{
 
 .hero-img{
   display: block;
-  min-width: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -95,9 +100,8 @@ section{
   position: absolute;
   bottom: 0;
   z-index: 100;
-  max-width: 520px;
+  max-width: 420px;
   left: 0;
-  width: 300px;
   padding: 2.5rem 3rem;
 }
 .hero-meta{
@@ -133,7 +137,7 @@ section{
 .dot{
   width: 4px;
   height: 4px;
-  background-color: #6c7a8f;
+  background-color: var(--text-secondary-color);
   border-radius: 50%;
 }
 
@@ -146,15 +150,16 @@ section{
   border:1px solid #ffffff33;
   padding: 5px 12px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--main-color);
+  width: max-content;
   background-color: #121212;
 }
 
 .btn-primary{
-  background-color: #514fcf;
+  background-color: var(--button-color);
   padding: 13px 26px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--main-color);
   font-weight: 500;
   font-size: 1rem;
   border: none;
@@ -163,10 +168,52 @@ section{
 .btn-primary span{
   margin-right: 5px;
 }
+
+.prev,.next{
+  color: var(--main-color);
+  position: absolute;
+  top: 200px;
+  z-index: 10;
+  font-size: 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.prev{
+  left: 4px;
+}
+.next{
+  right: 4px;
+}
+
 @keyframes shimmer {
   0%{background-position: 200% 0 ;}
   100%{background-position: -200% 0;}
 }
+.hero-gradient{
+  background: linear-gradient( to right,
+        #181818f7 0%,
+        #272727bf 35%,
+        #2a2a2a4d  45%,
+        transparent      70%);
+  z-index: 20;
+  inset: 0;
+  position: absolute;
+}
+
+.hero-gradient-bottom{
+  inset: 0;
+  z-index: 20;
+  position: absolute;
+  background: linear-gradient(
+  to top ,
+  rgb(23, 23, 23) 0%,
+  #1a1a1a 5%,
+  transparent 20%
+);
+
+}
+
 
 .hero.loading .hero-img{opacity: 0;}
 .hero.loading .hero-gradient,
@@ -175,3 +222,237 @@ section{
 .hero-title.skeleton{height: 56px;width: 280px; margin-bottom: 14px;}
 .hero-desc.skeleton{height: 60px;width: 100%;margin-bottom: 24px;}
 .hero-meta.skeleton{height: 18px;width: 180px;margin-bottom: 12px;}
+
+/* ---- HERO SECTION END ----  */
+
+
+/* ---- RECOMENDATION SECTION ---- */
+.recomendation-card-wrapper{
+  overflow-x:  scroll;
+  scrollbar-width: none;
+}
+
+.recomendations{
+  display: grid;
+  width: max-content;
+  padding: 0 40px;
+  gap: 25px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 330px;
+  margin-top: 30px;
+  transition: transform .4s ease;
+}
+
+.recomendation-card-img-container img{
+  display: block;
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+}
+.recomendation-card-img-container:hover{
+  transform: scale(1.1);
+}
+.recomendation-title{
+  margin-top: 30px;
+  margin-left: 50px;
+  user-select: none;
+  position: relative;
+  height: 15px;
+}
+.recomendation-title::before{
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 90px;
+  border-bottom: 4px solid var(--button-color);
+}
+.recomendation-title-container{
+  display: flex;
+  position: relative;
+}
+
+.recomendation-title2{
+  width: 140px;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  height: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+}
+.recomendation-title2 span{
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+.season-section-wrapper{
+  background-color: #0f0d10;
+  margin:30px 0 ;
+}
+.season-section-title{
+  position: absolute;
+  top: -65px;
+}
+.season-section{
+  width: 80%;
+  position: relative;
+  max-width: 700px;
+  grid-template-columns: repeat(8,1fr);
+  grid-template-rows: repeat(8,1fr);
+  display: grid;
+  height: 600px;
+  gap: 20px;
+  margin:  70px auto 0 auto;
+}
+.season-img-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.season-section-wrapper > div > div:nth-child(2) {
+  grid-row: span 7;
+  grid-column: span 4;
+}
+.season-section-wrapper > div > div:nth-child(3),.season-section-wrapper > div > div:nth-child(4) {
+  grid-row: span 4;
+  grid-column: span 2;
+}
+.season-section-wrapper > div > div:nth-child(5){
+grid-row: span 3;
+  grid-column: span 4;
+}
+.library-anime-title{
+  position: absolute;
+  top: -90px;
+  left: .6%;
+}
+.library-animes-section{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  width: 95%;
+  position: relative;
+  align-items: center;
+  margin: 30px auto;
+  margin-top: 70px;
+  gap: 30px;
+  max-width: 1400px;
+  justify-content: center;
+}
+.library-card-wrapper{
+  cursor: pointer;
+  height: 330px;
+  margin-bottom: 20px;
+  transition: transform .2s ease;
+}
+.library-card-wrapper:hover{
+  transform: scale(1.2);
+}
+.library-card-wrapper img {
+  width: 100%;
+  height: 260px;
+}
+.library-card-title  {
+  font-size: 17px;
+}
+
+.library-card-ep{
+  color: var(--text-secondary-color);
+}
+
+.library-animes-link{
+  border: 1px solid var(--button-color);
+  width: 80%;
+  grid-column: span 6;
+  margin: 50px auto 0 auto;
+  cursor: pointer;
+  display: flex;
+}
+.library-animes-link h2{
+  margin: 6px auto;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+  background-color: var(--header-color);
+  padding: 20px;
+}
+
+.policy-container{
+  display: flex;
+  gap: 20px;
+}
+.footer-name p{
+  color: var(--text-secondary-color);
+}
+
+.policy-container a{
+  text-decoration: none;
+  color: var(--text-secondary-color);
+}
+
+
+@media (max-width : 1200px){
+  .library-animes-section{
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    width: 90%;
+  }
+}
+
+@media (max-width : 768px) {
+  .season-main-img-wrapper img{
+    height: 300px;
+  }
+  .hero-desc{
+    display: none;
+  }
+  .library-animes-section{
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .policy-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  
+}
+.header-link-container{
+  gap: 20px;
+}
+}
+
+@media (max-width : 420px) {
+  .library-animes-section{
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+  .policy-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+  .season-main-img-wrapper img{
+    height: 250px;
+  }
+
+  .hero-desc{
+    display: none;
+  }
+  .header-link-container{
+  gap: 10px;
+}
+.genres > .genre-tag:nth-child(4), .genres > .genre-tag:nth-child(3){
+  display: none;
+}
+.hero-title{
+  font-size: 25px;
+}
+.header-link-container a:nth-child(3){
+  display: none;
+}
+.header-link-container a:nth-child(2){
+  display: none;
+}
+}
+
