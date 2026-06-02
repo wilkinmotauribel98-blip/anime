@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "https://esm.sh/react/react-router-dom"
 import HomePage from "./HomePage"
 import { SeasonPage } from "./SeasonPage"
 

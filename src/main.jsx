@@ -1,5 +1,5 @@
 import { StrictMode } from "https://esm.sh/react"
-import { createRoot } from 'react-dom/client'
+import { createRoot } from 'https://esm.sh/react/react-dom/client'
 import { App } from './App'
 import "./App.css"
 

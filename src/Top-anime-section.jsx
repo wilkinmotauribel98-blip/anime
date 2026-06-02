@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useEffect, useState } from 'https://esm.sh/react'
+import { useNavigate } from 'https://esm.sh/react/react-router-dom'
 import './App.css'
 
 
