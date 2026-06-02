@@ -1,4 +1,4 @@
-import { Await, useParams } from "https://esm.sh/react/react-router-dom";
+import { useParams } from "https://esm.sh/react-router-dom";
 import { useState, useEffect } from "https://esm.sh/react";
 import "./SeasonPage.css";
 import { EpisodeCard } from "./Ep-card";
