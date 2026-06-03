@@ -168,7 +168,7 @@ export function HomePage() {
             </div>)
           })}
           <div className="season-img-wrapper">
-              <img src={'/images/195600.png'} alt="" />
+              <img src={'/images/195600.png'} alt="" loading="lazy"/>
             </div>
           </div>
           </section>

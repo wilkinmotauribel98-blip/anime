@@ -7,7 +7,7 @@ export const Header = ()=>{
     <header className='header'>
         <div className="header-img-container">
           {/* ✅ logo está en public/, se referencia desde la raíz */}
-          <img src="/anime/logo.png" alt="logo" onClick={() => navigate('/')}/>
+          <img src="/anime/logo.png" alt="logo" onClick={() => navigate('/')} loading="lazy"/>
         </div>
         <div className="header-link-container">
           <a href="" className="header-link">Explore</a>

@@ -19,6 +19,7 @@ export function TopAnimeCard({ animeId, title, desc, episodes, format, genres, s
         id="hero-img"
         className={`hero-img ${load ? "" : "skeleton"}`}
         onLoad={() => setLoad(true)}
+        loading="lazy"
       />
       <div className="hero-gradient"></div>
       <div className="hero-gradient-bottom"></div>
