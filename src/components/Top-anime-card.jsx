@@ -14,13 +14,13 @@ export function TopAnimeCard({ animeId, title, desc, episodes, format, genres, s
   return (
     <div className={`hero ${load ? "" : "skeleton"}`} id="hero" onClick={()=> navigate(`/anime/${title.replace(/\s/g,"-")}`)}>
       <img
-        src={`/anime/images/${animeId}.png`}
-        alt=""
-        id="hero-img"
-        className={`hero-img ${load ? "" : "skeleton"}`}
-        onLoad={() => setLoad(true)}
-        loading="lazy"
-      />
+  src={`${import.meta.env.BASE_URL}images/${animeId}.png`}
+  alt={title}
+  id="hero-img"
+  className={`hero-img ${load ? "" : "skeleton"}`}
+  onLoad={() => setLoad(true)}
+  loading="lazy"
+/>
       <div className="hero-gradient-bottom"></div>
       <div className='hero-content' id="hero-content">
         <div className="hero-meta" id='hero-meta'>
