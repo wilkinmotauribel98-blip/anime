@@ -1,0 +1,86 @@
+.recomendation-track {
+  display: grid;
+  gap: 15px;
+  grid-auto-columns: 280px;
+  grid-auto-flow: column;
+}
+
+.recomendation-section h2:nth-child(1) , .seasonal-section h2:nth-child(1), .library-animes-section h2:nth-child(1){
+  width: 90%;
+  font-size: 30px;
+  margin: 20px auto;
+  max-width: 1300px;
+}
+.recomendation-slider{
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 0 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.recomendation-card-wrapper{
+  height: min-content;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.recomendation-card-img{
+  width: 100%;
+  border-radius: 20px;
+  aspect-ratio: 16 / 9;
+  transition: transform .6s ease;
+}
+
+.recomendation-card-greadient{
+  position: absolute;
+  inset: 0;
+  display: none;
+  z-index: 20;
+  background: linear-gradient(
+    to top, 
+    #000000 1% ,
+    transparent 70% 
+  );
+}
+
+.recomendation-card-title{
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 35px;
+  z-index: 30;
+  color: #fff;
+  left: 15px;
+  display: none;
+}
+
+.recomendation-card-genres{
+  gap: 8px;
+  display: none;
+  position: absolute;
+  bottom: 15px;
+  z-index: 30;
+  left: 15px;
+  color: var(--text-secondary-color);
+  align-items: center;
+}
+
+.recomendation-dot{
+  background-color: var(--text-secondary-color);
+}
+.recomendation-card-wrapper:hover .recomendation-card-img{
+  transform: scale(1.1);
+}
+.recomendation-card-wrapper:hover .recomendation-card-genres, .recomendation-card-wrapper:hover .recomendation-card-title, .recomendation-card-wrapper:hover .recomendation-card-greadient{
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .recomendation-card-title,.recomendation-card-genres,.recomendation-card-greadient {
+    display: flex;
+  }
+
+}

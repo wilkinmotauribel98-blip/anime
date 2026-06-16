@@ -1,0 +1,219 @@
+.season-hero-gradient{
+  inset: 0;
+  height: 450px;
+  z-index: 20;
+  position: absolute;
+  background: linear-gradient(
+  to top ,
+  #141415 0%,
+  #1a1a1a 5%,
+  transparent 50%)
+}
+.season-hero-wrapper img{
+  aspect-ratio: 16 / 9;
+}
+.season-hero-wrapper img, .season-hero-wrapper{
+  width: 100%;
+  max-height: 450px;
+  position: relative;
+}
+.season-hero-section{
+  margin-top: 80px;
+  margin-bottom: 400px;
+}
+.season-genres{
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  margin: auto;
+  color: #a7c1fb;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.season-dot{
+  width: 7px;
+  height: 7px;
+  margin-top: 4px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #a7c1fb;
+}
+.season-hero-title{
+  font-size: small;
+  width: 90%;
+  margin: auto;
+}
+.season-hero{
+  background-color: #121214;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  position: absolute;
+  border-radius: 20px;
+  bottom: -310px;
+  border: .2px solid var(--text-secondary-color);
+  gap: 8px;
+  left: 8%;
+  right: 8%;
+  z-index: 100;
+}
+.season-hero-meta{
+  display: flex;
+  gap: 15px;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  color: var(--text-secondary-color);
+}
+.season-hero-content{
+  width: 100%;
+  margin: auto;
+}
+.season-hero-desc{
+  height: 130px;
+  width: 90%;
+  overflow-y: scroll;
+  margin: auto;
+  scrollbar-width: none;
+  max-width: 500px;
+  margin-bottom: 20px;
+  color: #c0c4d6;
+}
+
+.year,.season-hero-episodes {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.year span, .year h3, .season-hero-episodes h3, .season-hero-episodes span{
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.season-hero-format{
+  padding: 1px 8px;
+  font-size: 10px;
+  border: .4px solid var(--text-secondary-color);
+}
+.season-hero-buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.season-hero-buttons div{
+  background-color: #adc6ff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 80%;
+  text-align: center;
+  color: #012e69;
+  margin: auto;
+}
+.season-hero-buttons div:nth-child(2){
+  background-color: #121214;
+  color: #ddd;
+  border: 0.5px solid var(--text-secondary-color);
+}
+
+/* ---------- SEASON HERO SECTION END ----------- */
+
+
+
+/* --------- SEASON HERO SECTION VERSION 2 START --------- */
+.season-hero-section-v2{
+  margin-top: 80px;
+}
+.season-hero-v2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  padding: 20px;
+  margin: auto;
+}
+.season-hero-wrapper-v2{
+  display: flex;
+  width: 85%;
+  margin: 30px auto;
+  background-color: #2c2c30;
+  border-radius: 20px;
+}
+
+.season-genres-v2, .season-hero-meta-v2{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.season-hero-meta-v2, .season-hero-desc-v2{
+  color: var(--text-secondary-color);
+}
+.season-hero-img-v2{
+  width: 30%;
+  border-radius: 20px;
+  min-height: 100%;
+}
+.season-genres-v2{
+  display: none;
+}
+.season-hero-episodes-v2{
+  gap: 2px;
+  align-items: center;
+  display: flex;
+}
+.season-hero-title-v2{
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.season-hero-buttons-v2{
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+.season-hero-buttons-v2 div:nth-child(1), .season-hero-buttons-v2 div:nth-child(2){
+  background-color: #adc6ff;
+  width: 40%;
+  padding: 13px;
+  text-align: center;
+  border-radius: 20px;
+  color: #141415;
+}
+.season-hero-desc-v2{
+  height: 120px;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.season-hero-buttons-v2 div:nth-child(2){
+  background-color: #37383a;
+  color: #ddd;
+}
+
+/* --------- SEASON HERO SECTION VERSION 2 END --------- */
+
+
+@media (min-width:1200px) {
+  .season-hero-section{
+    margin-bottom: 450px;
+  }
+  .season-hero{
+    width: 53%;
+    height: 430px;
+    right: 22%;
+    bottom: -390px;
+    left: 22%;
+    
+  }
+  .season-hero-info{
+    width: 56%;
+    margin-top: 150px;
+  }
+    .season-hero-title{
+      font-size: 40px;
+      font-weight: 900;
+    }
+  .season-genres, .season-hero-title, .season-hero-meta{
+    justify-content: center;
+    text-align: center;
+  }
+}

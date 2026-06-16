@@ -1,0 +1,65 @@
+:root{
+  --header-color:#121212;
+  --main-color:#f9f9fb;
+  --text-secondary-color:#6b7280;
+  --button-color: #514fcf;
+}
+/* ------------- HOME PAGE START ------------ */
+body{
+  padding: 0px;margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: var(--main-color);
+  background-color: rgb(6, 6, 6);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  margin-top: 75px;
+  width: 100%;
+  min-height: 150vh;
+}
+
+
+
+/* ----------- SEASON PAGE END ---------- */
+
+
+
+
+@media (max-width : 768px) {
+  .policy-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  
+}
+.header-link-container{
+  gap: 20px;
+}
+}
+
+@media (max-width : 420px) {
+  .policy-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+  .season-main-img-wrapper img{
+    height: 250px;
+  }
+
+  .header-link-container{
+  gap: 10px;
+}
+
+.header-link-container a:nth-child(3){
+  display: none;
+}
+.header-link-container a:nth-child(2){
+  display: none;
+}
+}
+

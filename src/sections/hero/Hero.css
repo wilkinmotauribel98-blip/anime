@@ -1,0 +1,255 @@
+
+section{
+  position: relative;
+}
+.hero-section{
+  overflow: hidden;
+  margin-top: 80px;
+}
+.track{
+  display: flex;
+}
+
+.hero{
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.hero-img{
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 16 / 6;
+}
+
+.hero-content{
+  position: absolute;
+  bottom: 25px;
+  max-width: 420px;
+  left: 0;
+  padding: 2.5rem 3rem;
+  z-index: 100;
+  margin-left: 9%;
+}
+
+.hero-meta{
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+
+.hero-desc{
+  width: 100%;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.hero-title{
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.score{
+  color: #bdaf33;
+}
+
+.skeleton{
+  background: linear-gradient(90deg,#1e1e1e 25%,#2a2a2a 50%, #1e1e1e 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 4px;
+}
+
+.dot{
+  width: 4px;
+  height: 4px;
+  color: inherit;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+
+.genres{
+  display:flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.genre-tag{
+  border:1px solid #ffffff33;
+  padding: 5px 12px;
+  border-radius: 20px;
+  color: var(--main-color);
+  width: max-content;
+  background-color: #121212;
+}
+
+.btn-primary{
+  background-color: rgb(106, 157, 234);
+  padding: 13px 26px;
+  border-radius: 8px;
+  color: #121212;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary span{
+  margin-right: 5px;
+}
+
+.prev,.next{
+  color: var(--main-color);
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  display: none;
+  font-size: 35px;
+  user-select: none;
+  
+  cursor: pointer;
+}
+
+.prev{
+  left: 14px;
+}
+.next{
+  right: 14px;
+}
+.hero-section:hover .prev, .hero-section:hover .next{
+  display: block;
+}
+
+@keyframes shimmer {
+  0%{background-position: 200% 0 ;}
+  100%{background-position: -200% 0;}
+}
+
+.hero-gradient{
+  background: linear-gradient( to right,
+        #181818f7 0%,
+        #272727bf 35%,
+        #2a2a2a4d  45%,
+        transparent      70%);
+  z-index: 20;
+  inset: 0;
+  position: absolute;
+}
+
+.hero-gradient-bottom{
+  inset: 0;
+  z-index: 20;
+  position: absolute;
+  background: linear-gradient(
+  to top ,
+  rgb(6, 6, 6) 0%,
+  rgb(8, 8, 8) 5%,
+  transparent 20%
+);
+}
+.dots{
+  width: 95px;
+  margin: auto;
+  overflow: hidden;
+}
+.dot-track{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+}
+.dot-track div{
+  background-color: #7a7d80;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  transition: min-width .3s ease;
+}
+.dot-track .active{
+  background-color: #e8e1e1;
+  min-width: 20px;
+  border-radius: 3px;
+}
+.dot-track .desactive{
+  min-width: 5px;
+  min-height: 5px;
+}
+.hero.loading .hero-img{opacity: 0;}
+.hero.loading .hero-gradient,
+.hero.loading .hero-gradient-bottom{display: none;}
+.hero.loading{background: #1e1e1e;}
+.hero-title.skeleton{height: 56px;width: 280px; margin-bottom: 14px;}
+.hero-desc.skeleton{height: 60px;width: 100%;margin-bottom: 24px;}
+.hero-meta.skeleton{height: 18px;width: 180px;margin-bottom: 12px;}
+
+@media (max-width: 1500px) {
+  .hero-img{
+    aspect-ratio: 16 / 7;
+  }
+
+  .hero-title{
+    font-size: 27px;
+    margin: 10px 0;
+  }
+  .genres{
+    display: none;
+  }
+  .hero-meta{
+    display: none;
+  }
+  .hero-content{
+    margin-left: 1%;
+  }
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .hero-title{
+    font-size: 27px;
+    margin: 10px 0;
+  }
+  .genres{
+    display: none;
+  }
+  .hero-img{
+    aspect-ratio: 16 / 10;
+  }
+  .hero-meta{
+    display: none;
+  }
+  .content .btn-primary{
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .hero-title{
+    font-size: 27px;
+    margin: 20px 0;
+  }
+  .genres{
+    display: none;
+  }
+  .hero-img{
+    aspect-ratio: 16 / 12;
+  }
+  .hero-meta{
+    display: none;
+  }
+  .content .btn-primary{
+    display: none;
+  }
+  .hero-content{
+    padding: 15px 12px;
+  }
+}

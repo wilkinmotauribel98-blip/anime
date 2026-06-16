@@ -1,0 +1,27 @@
+/* ---------- SEASON INFO SECTION START ------------- */
+.season-hero-info{
+  border-bottom: 1px solid var(--text-secondary-color);
+  border-top: 1px solid var(--text-secondary-color);
+  color: var(--text-secondary-color);
+  display: flex;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+section.info-section{
+  width: 85%;
+  margin: 0px auto;
+  max-width: 1000px;
+  overflow: hidden;
+  display: flex;
+  height: 230px;
+  align-items: self-end;
+}
+.season-hero-info div{
+  width: 50%;
+}
+
+
+/* ---------- SEASON INFO SECTION END ------------- */
+
