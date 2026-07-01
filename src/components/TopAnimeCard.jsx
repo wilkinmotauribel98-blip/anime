@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../layaut/App.css'
+import '../layout/App.css'
 
 
 export function TopAnimeCard({ animeId, title, desc, episodes, format, genres, score }) {

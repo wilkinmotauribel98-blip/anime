@@ -228,9 +228,7 @@ section{
   .hero-meta{
     display: none;
   }
-  .content .btn-primary{
-    display: none;
-  }
+  
 }
 @media (max-width: 600px) {
   .hero-title{
@@ -246,10 +244,11 @@ section{
   .hero-meta{
     display: none;
   }
-  .content .btn-primary{
+  .content .btn-primary, .hero-desc{
     display: none;
   }
   .hero-content{
-    padding: 15px 12px;
+    padding: 10px;
   }
+  
 }

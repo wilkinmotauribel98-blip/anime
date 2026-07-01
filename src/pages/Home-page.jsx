@@ -5,8 +5,8 @@ import { HeroSection } from '../sections/hero/Hero'
 import { RecomendationSection } from '../sections/recomendations/Recomendations'
 import { Footer } from '../sections/footer/Footer'
 import { AnimeLibrarySection } from '../sections/library/Library'
-import { animeFetch } from '../funtions/Home-anime-fetch'
-import { animeIds } from '../consts/Animes'
+import { animeFetch } from '../functions/Home-anime-fetch'
+import { animeIds } from "../consts/animes"
 
 export function HomePage() {
   const [load, setLoad] = useState(true);
@@ -27,7 +27,7 @@ export function HomePage() {
   return (
     <>
     <Header/>
-        <HeroSection topIds={topIds} data={data}/>
+        <HeroSection topIds={topIds} data={data} />
         <RecomendationSection recIds={recIds}/>
         <SeasonalSection seaIds={seaIds}/>
         <AnimeLibrarySection libIds={libIds}/>

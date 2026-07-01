@@ -36,9 +36,7 @@ main{
   margin: 20px;
   
 }
-.header-link-container{
-  gap: 20px;
-}
+
 }
 
 @media (max-width : 420px) {
@@ -47,19 +45,9 @@ main{
   flex-direction: column;
   margin: 20px;
 }
-  .season-main-img-wrapper img{
-    height: 250px;
-  }
 
-  .header-link-container{
-  gap: 10px;
-}
 
-.header-link-container a:nth-child(3){
-  display: none;
-}
-.header-link-container a:nth-child(2){
-  display: none;
-}
+
+
 }
 

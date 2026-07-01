@@ -1,27 +1,91 @@
-/* ---------- SEASON INFO SECTION START ------------- */
-.season-hero-info{
-  border-bottom: 1px solid var(--text-secondary-color);
-  border-top: 1px solid var(--text-secondary-color);
-  color: var(--text-secondary-color);
+.info-section{
+  padding-top: 40px;
+  padding-bottom: 15px;
+}
+
+.info{
+  border-radius: 30px;
+}
+
+.info > div{
+  border-bottom: 1px solid #66666d55;
   display: flex;
-  padding: 0 20px;
+  padding: 15px 28px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.info div h2{
+  color: #636366;
+  font-size: 16px;
+  padding: 0;margin: 0;
+}
+div.info-genres{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
   flex-wrap: wrap;
-  width: 100%;
+}
+.info-genre{
+  background-color: #303034;
+  color: #acacae;
+  text-wrap: nowrap;
+  width: max-content;
+  border-radius: 20px;
+  padding: 7px 14px;
 }
 
-section.info-section{
-  width: 85%;
-  margin: 0px auto;
-  max-width: 1000px;
-  overflow: hidden;
+@media (max-width: 1000px){
+  .info-section{
+    padding-top: 0;
+  }
+  .info > div{
+    padding: 10px 0 ;
+  }
+
+  .info > div:nth-child(3), .info > div:nth-child(1){
+    display: none;
+  }
+
+}
+
+@media (max-width: 620px){
+  .info-section{
+    padding-top: 0;
+  }
+  .info{
+    max-width: 50%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 0px;
+  }
+  .info > div:nth-child(3), .info > div:nth-child(1), .info > div:nth-child(2){
+    display: none;
+  }
+    div.info-genres{
   display: flex;
-  height: 230px;
-  align-items: self-end;
+  flex-direction: row;
+  gap: 10px;
+  padding: 0;
+  scrollbar-width: none;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
 }
-.season-hero-info div{
-  width: 50%;
+
+  div.info > div:nth-child(4){
+    border: none;
+    width: 100%;
+    padding: 0;
+    margin: auto;
+  }
+
+  div.info-genres{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 10px;
+  scrollbar-width: none;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
 }
-
-
-/* ---------- SEASON INFO SECTION END ------------- */
-
+}

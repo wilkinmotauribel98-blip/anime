@@ -1,24 +1,26 @@
 import './Info.css'
 
-export const SeasonInfoSection = ({autor, studio, status, score})=>{
+export const InfoSection = ({autor, studio, status, score, genres})=>{
   return(
       <section className='info-section'>
-          <div className="season-hero-info">
-            <div>
-              <h3>AUTOR</h3>
-              <h4>{autor}</h4>
+          <div className="info">
+            <div >
+              <h2>STUDIO</h2>
+              {studio}
             </div>
             <div>
-              <h3>STUDIO</h3>
-              <h4>{studio}</h4>
+              <h2>AUTHOR</h2>
+              {autor}
             </div>
             <div>
-              <h3>STATUS</h3>
-              <h4>{status}</h4>
+              <h2>SCORE</h2>
+              {score}/10
             </div>
             <div>
-              <h3>RATING</h3>
-              <h4>{score}</h4>
+              <h2>GENRES</h2>
+              <div className='info-genres'> 
+                {genres.map(e =>  <span className='info-genre' key={e}>{e}</span>)}
+              </div>
             </div>
           </div>
       </section>

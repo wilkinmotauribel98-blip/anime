@@ -1,4 +1,4 @@
-import { RecomendationCard } from "../../components/Recomendation-card";
+import { RecomendationCard } from "../../components/RecommendationCard";
 import './Recomendations.css'
 
 export const RecomendationSection = ({recIds})=>{

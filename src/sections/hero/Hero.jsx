@@ -1,4 +1,4 @@
-import { TopAnimeCard } from "../../components/Top-anime-card";
+import { TopAnimeCard } from "../../components/TopAnimeCard";
 import { useState, useRef } from "react";
 import './Hero.css'
 

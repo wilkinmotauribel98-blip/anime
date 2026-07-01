@@ -1,4 +1,4 @@
-import {  AnimeLibraryCard  } from "../../components/Anime-library-card"
+import {  AnimeLibraryCard  } from "../../components/AnimeLibraryCard"
 import './Library.css'
 export const AnimeLibrarySection = ({libIds})=>{
   return(
